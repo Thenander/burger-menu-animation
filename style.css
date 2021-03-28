@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #333;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background: #000;
+}
+
+.menu-btn {
+  font-size: 15px; /* font-size changes the size of the whole burger. */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 4em;
+  width: 4em;
+}
+
+.menu-btn__burger,
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  font: 1em;
+  content: '';
+  background: #fff;
+  width: 2.5em;
+  height: 0.3em;
+  border-radius: 100vw;
+  transition: 0.4s cubic-bezier(0.54, 1.86, 0.67, 1.26);
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  position: absolute;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-0.75em);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(0.75em);
+}
+
+/* Animation */
+.burger-menu-active {
+  transform: translateX(-4em);
+  height: 0;
+}
+.burger-menu-active::before {
+  transform: translate(4em, -0.15em) rotate(135deg);
+}
+.burger-menu-active::after {
+  transform: translate(4em, -0.15em) rotate(-135deg);
+}
