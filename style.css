@@ -11,15 +11,18 @@ body {
 .nav {
   position: fixed;
   top: 0;
+  min-height: 100vh;
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   background: #000;
 }
 
 .menu-btn {
-  font-size: 15px; /* font-size changes the size of the whole burger. */
+  font-size: 60px; /* font-size changes the size of the whole burger. */
+  background-color: crimson;
+  border-radius: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
